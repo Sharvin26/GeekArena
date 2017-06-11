@@ -11,6 +11,9 @@
         <li class="list-group-item">
           <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
         </li>
+        <li class="list-group-item">
+          <%= link_to 'My Posts', author_posts_path, class: "nav-link #{yield(:author)}" %>
+        </li>
       </ul>
     </div>
   </div>
@@ -33,6 +36,9 @@
       </li>
       <li class="nav-item">
         <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+      </li>
+      <li class="nav-item">
+          <%= link_to 'My Posts', author_posts_path, class: "nav-link #{yield(:author)}" %>
       </li>
     </ul>
   </div>
