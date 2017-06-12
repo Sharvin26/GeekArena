@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'devise'
-
+gem 'annotate'
 
 
 

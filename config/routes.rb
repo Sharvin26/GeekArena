@@ -5,8 +5,11 @@ Rails.application.routes.draw do
 
   # /author/posts
   namespace :authors do
-    resources :posts
-  end
+    resources :posts do
+      put 'publish' => 'posts#publish', on: :member
+      put 'unpublish' => 'posts#unpublish', on: :member
+    end  
+end
 
   # /
   # /posts
