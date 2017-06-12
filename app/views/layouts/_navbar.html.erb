@@ -11,9 +11,14 @@
         <li class="list-group-item">
           <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
         </li>
-        <li class="list-group-item">
-          <%= link_to 'My Posts', author_posts_path, class: "nav-link #{yield(:author)}" %>
-        </li>
+        <% if author_signed_in? %>
+          <li class="list-group-item">
+            <%= link_to 'My posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
+          </li>
+          <li class="list-group-item">
+            <%= link_to 'Log out', destroy_author_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -24,10 +29,7 @@
     <a class='navbar-brand' href='/'>
       Geek<span class='light'>Arena</span>
     </a>
-    <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-      &#9776;
-    </button>
-    <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
+      <ul class="nav justify-content-end">
       <li class="nav-item">
         <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
       </li>
@@ -37,9 +39,20 @@
       <li class="nav-item">
         <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
       </li>
+
+      <% if author_signed_in? %>
       <li class="nav-item">
-          <%= link_to 'My Posts', author_posts_path, class: "nav-link #{yield(:author)}" %>
+        <%= link_to 'My posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
       </li>
+      <li class="nav-item">
+        <%= link_to 'Log out', destroy_author_session_path, method: :delete, class: "nav-link" %>
+      </li>
+      <%end%>
+
     </ul>
   </div>
 </nav>
+
+
+
+

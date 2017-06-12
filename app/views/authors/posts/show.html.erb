@@ -1,8 +1,8 @@
 <% provide(:page_title ,@post.title) %>
 <% provide(:author ,'active') %>
 <div>
-  <%= link_to 'Edit', edit_author_post_path(@post) , class: 'btn btn-sm btn-warning' %>
-  <%= link_to 'Remove', author_post_path(@post), method: :delete, data: {confirm: 'Are You Sure'}, class: 'btn btn-sm btn-danger' %>
+  <%= link_to 'Edit', edit_authors_post_path(@post) , class: 'btn btn-sm btn-warning' %>
+  <%= link_to 'Remove', authors_post_path(@post), method: :delete, data: {confirm: 'Are You Sure'}, class: 'btn btn-sm btn-danger' %>
 </div>
 <div class="row">
   <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
