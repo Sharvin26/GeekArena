@@ -40,6 +40,7 @@ gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 gem 'devise'
 gem 'annotate'
 gem 'will_paginate', '~> 3.1.0'
+gem 'acts-as-taggable-on', '~> 4.0'
 
 
 
