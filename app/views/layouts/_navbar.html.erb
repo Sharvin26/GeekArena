@@ -53,7 +53,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <%= link_to 'My posts', authors_posts_path, class: "dropdown-item " %>
-        <%= link_to 'Accounts', '#', class: "dropdown-item " %>
+        <%= link_to 'Accounts', authors_account_path , class: "dropdown-item " %>
         <%= link_to 'Log out', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
         </div>
       </li>
