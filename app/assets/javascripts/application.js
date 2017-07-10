@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require tether
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
@@ -18,11 +19,12 @@
 
 document.addEventListener("turbolinks:load", function() {
     tinymce.remove();
-    tinymce.init({ 
-    height: '475',
-    selector:'textarea#post_body',
-     plugins: "codesample image media link fullscreen code",
-    menubar: "view",
-    toolbar: "undo redo | styleselect | bold italic link |  codesample image media fullscreen | code"});
-  
+    tinymce.init({
+        height: '475',
+        selector: 'textarea#post_body',
+        plugins: "codesample image media link fullscreen code",
+        menubar: "view",
+        toolbar: "undo redo | styleselect | bold italic link |  codesample image media fullscreen | code"
+    });
+
 })
