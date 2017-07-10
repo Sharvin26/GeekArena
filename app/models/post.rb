@@ -23,7 +23,7 @@ class Post < ApplicationRecord
 
     belongs_to :author
 
-    PER_PAGE = 3
+    PER_PAGE = 6
 
     scope :most_recent, ->{ order(published_at: :desc)}
     scope :published, -> { where(published: true) }
@@ -53,5 +53,9 @@ class Post < ApplicationRecord
     def unpublish
       update(published: false,published_at: nil)
     end
+
+
+
+    
 
 end
